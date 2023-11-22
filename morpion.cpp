@@ -3,11 +3,19 @@
 void affichage_morpion(char** tab, int size) {
 
 	std::cout<<std::endl<<"   ";
-	for(int i = 0; i < size; ++i) std::cout<<" "<<i<<"  ";
+	for(int i = 0; i < 10; ++i) std::cout<<"  "<<i<<" ";
+	for(int i = 10; i < size; ++i) std::cout<<" "<<i<<" ";
+
+
 	std::cout<<std::endl;
 	for(int i = 0; i < size; ++i) {
+		if(i<10){
+			std::cout<<i<<"  | "; 
+		}
+		else {
+			std::cout<<i<<" | "; 
 
-		std::cout<<i<<" | "; 
+		}
 		for(int j = 0; j < size; ++j) {
 	
 			std::cout<<tab[i][j]<<" | "; 
