@@ -17,14 +17,14 @@ void affichage_morpion(char** tab, int size) {
 
 		}
 		for(int j = 0; j < size; ++j) {
-	
-			std::cout<<tab[i][j]<<" | "; 
+			if (tab[i][j]=='O') std::cout<<"\033[34m"<<tab[i][j]<<"\033[0m"<<" | "; 
+			else if (tab[i][j]=='X') std::cout<<"\033[31m"<<tab[i][j]<<"\033[0m"<<" | "; 
+			else std::cout<<tab[i][j]<<" | ";
 		
 		}
 		std::cout<<std::endl;
 	}
 }
-
 
 void init_morpion(char** & tab, int size) {
 
@@ -48,13 +48,13 @@ void delete_morpion(char** tab, int size) {
 
 void placer_morpion(char** tab, int size, int x, int y, char pion) {
 
-	if(x < size && x >= 0 && y >= 0 && y < size && tab[x][y]==' ' ) tab[x][y] = pion;
+	if(x < size && x >= 0 && y >= 0 && y < size && (tab[x][y]!='X' || tab[x][y]!='Y') ) tab[x][y] = pion;
 
 }
 
 bool estLibre_morpion(char** tab, int size, int x, int y) {
 
-	return (x >= 0 && y >= 0 && x < size && y < size && tab[x][y]==' ');
+	return (x >= 0 && y >= 0 && x < size && y < size && (tab[x][y]!='X' || tab[x][y]!='Y'));
 
 }
 
