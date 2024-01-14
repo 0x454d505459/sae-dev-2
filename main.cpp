@@ -1,5 +1,5 @@
 #include "morpion.h"
-#include "ia/croix/cross.cpp"
+#include "ia/croix/gabriel/cross.cpp"
 
 int main() {
 

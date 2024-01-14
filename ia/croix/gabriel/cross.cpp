@@ -4,7 +4,7 @@
 
 // TODO: ADD CHECK FOR NEAR LOSSES
 
-#include "../../morpion.h"
+#include "../../../morpion.h"
 #include "./debug_utils.cpp"
 #include "./rules.cpp"
 #include <iostream>
